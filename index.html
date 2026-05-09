@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Día del Maestro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- MUSICA -->
+    <audio autoplay loop>
+        <source src="musica.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- MENU PRINCIPAL -->
+    <section id="menu">
+
+        <img src="assets/menu.jpg" class="fondo">
+
+        <!-- BOTONES PROFES -->
+<button class="profe"
+onclick="abrirModal(0)"
+style="
+top:37%;
+left:8%;
+width:350px;
+height:80px;
+">
+</button>
+
+<button class="profe"
+onclick="abrirModal(1)"
+style="
+top:71%;
+left:0%;
+width:320px;
+height:80px;
+">
+</button>
+
+<button class="profe"
+onclick="abrirModal(2)"
+style="
+top:50%;
+left:50%;
+width:350px;
+height:80px;
+">
+</button>
+
+<button class="profe"
+onclick="abrirModal(3)"
+style="
+top:73%;
+left:62%;
+width:320px;
+height:80px;
+">
+</button>
+
+<button class="profe"
+onclick="abrirModal(4)"
+style="
+top:5%;
+left:65%;
+width:250px;
+height:80px;
+">
+</button>
+
+<button class="profe"
+onclick="abrirModal(5)"
+style="
+top:85%;
+left:35%;
+width:300px;
+height:80px;
+">
+</button>
+<!-- INDICACIONES -->
+
+<button class="profe"
+onclick="abrirIndicaciones()"
+style="
+top:2%;
+left:1%;
+width:220px;
+height:70px;
+">
+</button>
+
+<!-- CREDITOS -->
+
+<button class="profe"
+onclick="abrirCreditos()"
+style="
+top:17%;
+left:1%;
+width:220px;
+height:70px;
+">
+</button>
+
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal">
+
+        <div class="contenidoModal">
+
+            <h2>Ingrese contraseña</h2>
+
+            <input type="password" id="password">
+
+            <p id="error"></p>
+
+            <button onclick="verificar()">Entrar</button>
+
+            <button onclick="cerrarModal()">Cerrar</button>
+
+        </div>
+
+    </div>
+    <!-- MODAL INDICACIONES -->
+
+<div id="modalIndicaciones" class="modalExtra">
+
+    <div class="contenidoExtra">
+
+        <h2>Indicaciones</h2>
+
+        <p>
+            PULSEN SU NOMBRE Y MATERIA CORRESPONDIENTE QUE LE IMPARTIERON AL JÓVEN LUCIO, INGRESEN LA CONTRASEÑA Y DISFRUTEN DEL CONTENIDO.
+        </p>
+
+        <button onclick="cerrarIndicaciones()">
+            Cerrar
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MODAL CREDITOS -->
+
+<div id="modalCreditos" class="modalExtra">
+
+    <div class="contenidoExtra">
+
+        <h2>Créditos</h2>
+
+        <p>
+            UN PEQUEÑO PROYECTO DE PROGRAMACIÓN REALIZADO CON CARIÑO PARA MIS MAESTRAS FAVORITAS, 
+            LES AGRADEZCO DE TODO CORAZÓN SUS ENSEÑANZA Y CONSEJOS.
+            
+            ATTE: PROGRAMADOR E ILUSTRADOR LUCIO ALONSO ARROYO.
+        </p>
+
+        <button onclick="cerrarCreditos()">
+            Cerrar
+        </button>
+
+    </div>
+
+</div>
+
+    <!-- PANTALLA PROFES -->
+    <section id="pantallaProfe">
+
+        <img src="historia.jpg" id="fondoProfe">
+
+        <div id="pizarron">
+
+            <p id="texto"></p>
+
+            <button id="siguiente" onclick="siguienteTexto()">
+                Siguiente
+            </button>
+
+            <button id="gracias" onclick="volverMenu()">
+                Gracias
+            </button>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

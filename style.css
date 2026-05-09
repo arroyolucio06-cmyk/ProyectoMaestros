@@ -1,0 +1,364 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    width:100vw;
+    height:100vh;
+
+    overflow:hidden;
+
+    background:black;
+
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* ========================= */
+/* MENU Y PANTALLAS */
+/* ========================= */
+
+#menu,
+#pantallaProfe{
+
+   position:relative;
+
+    width:100vw;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+}
+
+.contenedorA4{
+
+    position:relative;
+
+    aspect-ratio:1.414 / 1;
+
+    width:95vw;
+
+    max-height:95vh;
+}
+/* ========================= */
+/* FONDOS */
+/* ========================= */
+
+.fondo,
+#fondoProfe{
+
+ width:100%;
+
+    height:100%;
+
+    object-fit:contain;
+
+  display:block;
+}
+
+/* ========================= */
+/* BOTONES PROFES */
+/* ========================= */
+
+.profe{
+
+    position:absolute;
+
+    border:none;
+
+    background:rgba(255,255,255,0);
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+
+.profe:hover{
+
+    background:rgba(255,255,255,0.15);
+
+    backdrop-filter:blur(3px);
+
+    border-radius:20px;
+}
+
+/* ========================= */
+/* MODAL */
+/* ========================= */
+
+#modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.7);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:100;
+}
+
+/* CONTENIDO MODAL */
+
+.contenidoModal{
+
+    width:350px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    animation:aparecer 0.3s ease;
+}
+
+.contenidoModal h2{
+
+    margin-bottom:20px;
+
+    color:#333;
+}
+
+.contenidoModal input{
+
+    width:100%;
+
+    padding:12px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+
+    font-size:18px;
+}
+
+.contenidoModal button{
+
+    margin-top:15px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:0.3s;
+}
+
+.contenidoModal button:hover{
+
+    transform:scale(1.05);
+}
+
+/* ERROR */
+
+#error{
+
+    margin-top:10px;
+
+    color:red;
+
+    font-weight:bold;
+}
+
+/* ========================= */
+/* PANTALLA PROFES */
+/* ========================= */
+
+#pantallaProfe{
+
+    display:none;
+}
+
+/* ========================= */
+/* PIZARRON */
+/* ========================= */
+
+#pizarron{
+
+    position:absolute;
+
+    top:10%;
+    left:40%;
+
+    width:45%;
+
+    height:45%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
+}
+
+/* TEXTO */
+
+#texto{
+
+    color:white;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+    font-weight:bold;
+
+    text-shadow:2px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* BOTONES */
+
+#siguiente,
+#gracias{
+
+    margin-top:25px;
+
+    padding:12px 30px;
+
+    border:none;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+#siguiente:hover,
+#gracias:hover{
+
+    transform:scale(1.05);
+}
+
+/* BOTON GRACIAS */
+
+#gracias{
+
+    display:none;
+}
+
+/* ========================= */
+/* ANIMACION */
+/* ========================= */
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(0.8);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+    }
+}
+/* ========================= */
+/* MODALES EXTRA */
+/* ========================= */
+
+.modalExtra{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.7);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:200;
+}
+
+.contenidoExtra{
+
+    width:400px;
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    animation:aparecer 0.3s ease;
+}
+
+.contenidoExtra h2{
+
+    margin-bottom:20px;
+}
+
+.contenidoExtra p{
+
+    font-size:18px;
+
+    line-height:1.5;
+}
+
+.contenidoExtra button{
+
+    margin-top:20px;
+
+    padding:12px 25px;
+
+    border:none;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:16px;
+}
